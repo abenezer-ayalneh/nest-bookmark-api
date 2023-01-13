@@ -7,7 +7,9 @@ import { ConfigModule } from "@nestjs/config";
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
+    ConfigModule.forRoot({ // To be able to use the '.env' file
+       isGlobal: true // To make it available to all modules
+      }),
     AuthModule,
     UserModule,
     BookmarkModule,
